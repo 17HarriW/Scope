@@ -8,18 +8,39 @@ namespace Scope
 {
     class Program
     {
+        static string language = "English";
+
         static void Main(string[] args)
         {
-            SayHello("English");
-            SayHello("German");
-            SayHello("French");
+
+            ShowOff();
+
+            Console.ReadLine();
         }
+
         /// <summary>
-        /// Returns hello in a given language
+        /// Returns a greeting in all listed languages
+        /// </summary>
+        private static void ShowOff()
+        {
+            List<string> languages = new List<string> {
+                "English", "German","French","Yorkshire"
+            };
+
+            foreach(string language in languages)
+            {
+                SayHello(language);
+            }
+
+        }
+
+        /// <summary>
+        /// Returns a greeting in a given language
         /// </summary>
         /// <param name="language"> Desired language </param>
         private static void SayHello(string language)
         {
+            Console.Write("You can say a greeting in " + language + " by saying ");
             switch (language)
             {
                 case "English":
@@ -32,7 +53,7 @@ namespace Scope
                     Console.WriteLine("Bonjour");
                     break;
                 default:
-                    Console.WriteLine("How?");
+                    Console.WriteLine("Allo");
                     break;
             }
         }
