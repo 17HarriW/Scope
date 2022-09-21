@@ -15,7 +15,7 @@ namespace Scope
             SayHello("French");
         }
         /// <summary>
-        /// Returns hello in parameter language
+        /// Returns hello in a given language
         /// </summary>
         /// <param name="language"> Desired language </param>
         private static void SayHello(string language)
