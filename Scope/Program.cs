@@ -40,7 +40,7 @@ namespace Scope
         /// <param name="language"> Desired language </param>
         private static void SayHello(string language)
         {
-            Console.Write("You can say a greeting in " + language + " by saying ");
+            Console.Write($"You can say a greeting in {language} by saying ");
             switch (language)
             {
                 case "English":
