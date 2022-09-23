@@ -13,7 +13,9 @@ namespace Scope
         static void Main(string[] args)
         {
 
-            ShowOff();
+            string language = "Japanese";
+            SayHello(language);
+            Console.WriteLine($"I just said hello in {language}");
 
             Console.ReadLine();
         }
@@ -40,6 +42,7 @@ namespace Scope
         /// <param name="language"> Desired language </param>
         private static void SayHello(string language)
         {
+            language = "English";
             Console.Write($"You can say a greeting in {language} by saying ");
             switch (language)
             {
@@ -51,6 +54,9 @@ namespace Scope
                     break;
                 case "French":
                     Console.WriteLine("Bonjour");
+                    break;
+                case "Japanese":
+                    Console.WriteLine("Kon'ichiwa");
                     break;
                 default:
                     Console.WriteLine("Allo");
